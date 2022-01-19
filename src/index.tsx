@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Home from './components/home';
+import './style/index.less';
 import reportWebVitals from './reportWebVitals';
-
+import Home from './components/home/index'
 ReactDOM.render(
   <React.StrictMode>
-    <Home/>
+    <Home name=''/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,8 +1,4 @@
-import * as React from 'react';
-import {PureComponent } from 'react';
-
-export default class Home extends PureComponent{
-   render(){
-     return 'home'
-   }
-}
+import  loadComponent from'../../utils/loadComponent';
+import {HomeProps, HomeType} from './types';
+ const Home = loadComponent({loader:()=>import('./home')});
+ export default Home;
