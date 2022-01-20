@@ -1,4 +1,8 @@
-import  loadComponent from'../../utils/loadComponent';
-import {HomeProps, HomeType} from './types';
- const Home = loadComponent({loader:()=>import('./home')});
- export default Home;
+import loadComponent from '../../utils/loadComponent'
+import { homePreCls } from '../../style/constant'
+const Home = loadComponent({ loader: () => import('./home') })
+
+Home.defaultProps = {
+  preCls: homePreCls,
+}
+export default Home

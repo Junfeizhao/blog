@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './components/home/index'
 ReactDOM.render(
   <React.StrictMode>
-    <Home name=''/>
+    <Home/>
   </React.StrictMode>,
   document.getElementById('root')
 );

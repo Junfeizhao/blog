@@ -1,21 +1,22 @@
-import * as React from 'react';
-import {PureComponent } from 'react';
-import { Button } from "@arco-design/web-react";
-const preCls = 'blog-home';
+import * as React from 'react'
+import { PureComponent } from 'react'
+import { Grid } from '@arco-design/web-react'
+import { HomeProps } from './types'
 
-interface HomeProps{
- name?:string
-}
+const { Row, Col } = Grid
 
-export default class Home extends PureComponent<HomeProps>{
-   render(){
-     return <div className={preCls}>
-       <div className={`${preCls}-left`}>
-         left
-       </div>
-       <div className={`${preCls}-right`}>
-        right
-       </div>
-     </div>
-   }
+export default class Home extends PureComponent<HomeProps> {
+  render() {
+    const { preCls } = this.props
+    return (
+        <Row className={preCls}>
+          <Col className={`${preCls}-left`} span={8}>
+            <div>left</div>
+          </Col>
+          <Col className={`${preCls}-right`} span={16}>
+            <div>right</div>
+          </Col>
+        </Row>
+    )
+  }
 }

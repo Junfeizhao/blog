@@ -1,6 +1,6 @@
+import { ComponentType } from 'react'
+import { BaseProps } from '../../types/index'
 
-import { ComponentType } from 'react';
-
-export type HomeProps ={name:string}
+export interface HomeProps extends BaseProps {}
 
 export type HomeType = ComponentType<HomeProps>
