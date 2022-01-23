@@ -1,3 +1,4 @@
+@import './cssVar.less';
 @import './prefix.less';
 @import '../components/home/index.less';
 @import '@arco-design/web-react/dist/css/arco.css';
@@ -9,4 +10,17 @@ body {
 
 #root {
   height: 100%;
+}
+
+
+
+//通用的样式
+
+//link
+.@{link}{
+  color: #0056b3;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
