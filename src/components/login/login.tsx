@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { PureComponent } from 'react'
 import { Grid, Input, Form, Checkbox, Button } from '@arco-design/web-react'
-import { HomeProps } from './types'
+import { loginProps } from './types'
 import bgUrl from '../../assets/theme/imgs/login-bg.jpg'
 import logoUrl from '../../assets/theme/imgs/logo.svg'
 import { link } from '../../style/constant'
@@ -9,7 +9,7 @@ import { link } from '../../style/constant'
 const { Row, Col } = Grid
 const { Item } = Form
 
-export default class Home extends PureComponent<HomeProps> {
+export default class login extends PureComponent<loginProps> {
   customRenderLabel = () => {
     const { preCls } = this.props
     return (

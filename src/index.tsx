@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.less';
 import reportWebVitals from './reportWebVitals';
-import Home from './components/home/index'
+import Home from './components/login/index'
 ReactDOM.render(
   <React.StrictMode>
     <Home/>
