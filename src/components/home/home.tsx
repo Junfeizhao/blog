@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Component, PureComponent } from 'react'
 import { BaseProps } from '../../types/index'
+
 import {
   Layout,
   Menu,
@@ -12,15 +13,40 @@ import {
   Tabs,
   List,
   Avatar,
+  Space,
+  Tag,
 } from '@arco-design/web-react'
-import { IconGithub } from '@arco-design/web-react/icon'
+import {
+  IconGithub,
+  IconEye,
+  IconThumbUp,
+  IconCheckCircleFill,
+  IconMessage,
+} from '@arco-design/web-react/icon'
+const jsFiles = (require as any).context(
+  '../../assets/theme/imgs',
+  false,
+  /.png$/
+)
 const { Header, Sider, Content, Footer } = Layout
 const { Row, Col } = Grid
+const TabPane = Tabs.TabPane
+
+const tabs = [
+  { title: '最新', key: '0' },
+  { title: '最热', key: '1' },
+  { title: '前端', key: '2' },
+  { title: '后端', key: '3' },
+  { title: '算法', key: '4' },
+  { title: '想法', key: '5' },
+]
 
 const MenuItem = Menu.Item
 const SubMenu = Menu.SubMenu
 const Search = Input.Search
-const TabPane = Tabs.TabPane
+const jsImgs = jsFiles.keys().map((path: any) => {
+  return jsFiles(path)?.default || jsFiles(path)
+})
 
 export interface HomeProps extends BaseProps {}
 export default class Home extends PureComponent<HomeProps> {
@@ -89,22 +115,51 @@ export default class Home extends PureComponent<HomeProps> {
 
   customRenderList = (item: any, index: number): React.ReactNode => {
     const { preCls } = this.props
+    // const imgSrc = js
     return (
       <div className={`${preCls}-list-item`}>
-        <h3>我是文章的标题</h3>
-        <p>
-          <span>
-            <Avatar size={30} />
-            &nbsp;&nbsp;爱唱歌的程序员
-          </span>
-        </p>
+        <div className={`${preCls}-list-item-left`}>
+          <h3>
+            我是文章的标题
+            <span className={`${preCls}-tags`}>
+              <Space size="small">
+                <Tag>css</Tag>
+                <Tag>css</Tag>
+              </Space>
+            </span>
+          </h3>
+          <p>
+            <span>
+              <Avatar size={30} />
+              &nbsp;&nbsp;爱唱歌的程序员
+              <span className={`${preCls}-operation-icon-wrap`}>
+                <IconEye
+                  className={`${preCls}-operation-icon ${preCls}-operation-eye`}
+                />
+                258
+                <IconThumbUp
+                  className={`${preCls}-operation-icon ${preCls}-operation-thumup`}
+                />
+                55
+                <IconMessage
+                  className={`${preCls}-operation-icon ${preCls}-operation-message`}
+                />
+                1
+              </span>
+              <span className={`${preCls}-public-time`}>2021/03/21</span>
+            </span>
+          </p>
+        </div>
+        <div className={`${preCls}-list-item-right`}>
+          <img src={`${jsImgs[index]}`} alt="" />
+        </div>
       </div>
     )
   }
 
   render() {
     const { preCls } = this.props
-    const dataSource = new Array(4).fill({
+    const dataSource = new Array(50).fill({
       title: 'Beijing Bytedance Technology Co., Ltd.',
       description:
         'Beijing ByteDance Technology Co., Ltd. is an enterprise located in China.',
@@ -141,14 +196,28 @@ export default class Home extends PureComponent<HomeProps> {
           <Layout className={`${preCls}-container`}>
             <Row>
               <Col span={15}>
-                <Content>
-                  <List
-                    bordered={false}
-                    className={`${preCls}-list`}
-                    dataSource={dataSource}
-                    render={this.customRenderList}
-                  />
-                </Content>
+                <Tabs
+                  className={`${preCls}-container-tabs`}
+                  defaultActiveTab="0"
+                >
+                  {tabs.map((x, i) => (
+                    <TabPane
+                      className={`${preCls}-container-tabs-pannel`}
+                      destroyOnHide
+                      key={x.key}
+                      title={x.title}
+                    >
+                      <Content>
+                        <List
+                          bordered={false}
+                          className={`${preCls}-list`}
+                          dataSource={dataSource}
+                          render={this.customRenderList}
+                        />
+                      </Content>
+                    </TabPane>
+                  ))}
+                </Tabs>
               </Col>
               <Col offset={1} span={6}>
                 <Sider className={`${preCls}-silder`}>
