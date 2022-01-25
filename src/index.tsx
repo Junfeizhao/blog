@@ -4,10 +4,11 @@ import './style/index.less'
 import reportWebVitals from './reportWebVitals'
 import Home from './components/home/index'
 import Login from './components/login/index'
+import RichText from './components/creation/richtext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <RichText />
   </React.StrictMode>,
   document.getElementById('root')
 )

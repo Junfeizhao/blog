@@ -1617,6 +1617,462 @@
   dependencies:
     "@types/node" "*"
 
+"@types/ckeditor__ckeditor5-adapter-ckfinder@*":
+  version "29.0.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-adapter-ckfinder/download/@types/ckeditor__ckeditor5-adapter-ckfinder-29.0.4.tgz#79cecba5f1502df3696e62d5ddffa019ef66b9db"
+  integrity sha1-ec7LpfFQLfNpbmLV3f+gGe9muds=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-upload" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-alignment@*":
+  version "29.0.5"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-alignment/download/@types/ckeditor__ckeditor5-alignment-29.0.5.tgz#becbcc75e957f8ee2084a463b4284d845da8751e"
+  integrity sha512-ehA/11LH1ajcF/2d0BlH/B+CUcz4GpmnYvWTIzA6Hqpn+Cw3SLh4CzKsWqWxyewK06xjmLe+fIXfMaizGZOIHg==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-autoformat@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-autoformat/download/@types/ckeditor__ckeditor5-autoformat-31.0.0.tgz#01a4cf0db0ce1acc5b01fe16acd6493223a47f54"
+  integrity sha512-4cc39Z7IcUH+PCLX09cR3DiW9JA2/tio6M/Dk7DVbEkwEBJw1s7+MlZ2Kw69JeAY6lOcuzNRVxLtA0u9adFxCA==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+
+"@types/ckeditor__ckeditor5-autosave@*":
+  version "29.0.1"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-autosave/download/@types/ckeditor__ckeditor5-autosave-29.0.1.tgz#e78149cafa3adb3e36ac893bb7fefff898a82ab1"
+  integrity sha1-54FJyvo62z42rIk7t/7/+JioKrE=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-basic-styles@*":
+  version "28.0.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-basic-styles/download/@types/ckeditor__ckeditor5-basic-styles-28.0.2.tgz#8ff10fd6b05fb907b8dd518bb5d417db868aa3d3"
+  integrity sha1-j/EP1rBfuQe43VGLtdQX24aKo9M=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+
+"@types/ckeditor__ckeditor5-block-quote@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-block-quote/download/@types/ckeditor__ckeditor5-block-quote-29.0.3.tgz#9bd392d979768ab128ead779afe3cc6b284d876a"
+  integrity sha1-m9OS2Xl2irEo6td5r+PMayhNh2o=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-enter" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+
+"@types/ckeditor__ckeditor5-build-classic@^29.0.1":
+  version "29.0.1"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-build-classic/download/@types/ckeditor__ckeditor5-build-classic-29.0.1.tgz#6ef0abd2a382c78dff22f0bcb287af9ac36f41cc"
+  integrity sha1-bvCr0qOCx43/IvC8soevmsNvQcw=
+  dependencies:
+    "@types/ckeditor__ckeditor5-adapter-ckfinder" "*"
+    "@types/ckeditor__ckeditor5-autoformat" "*"
+    "@types/ckeditor__ckeditor5-basic-styles" "*"
+    "@types/ckeditor__ckeditor5-block-quote" "*"
+    "@types/ckeditor__ckeditor5-ckfinder" "*"
+    "@types/ckeditor__ckeditor5-cloud-services" "*"
+    "@types/ckeditor__ckeditor5-easy-image" "*"
+    "@types/ckeditor__ckeditor5-editor-classic" "*"
+    "@types/ckeditor__ckeditor5-essentials" "*"
+    "@types/ckeditor__ckeditor5-heading" "*"
+    "@types/ckeditor__ckeditor5-image" "*"
+    "@types/ckeditor__ckeditor5-indent" "*"
+    "@types/ckeditor__ckeditor5-link" "*"
+    "@types/ckeditor__ckeditor5-list" "*"
+    "@types/ckeditor__ckeditor5-media-embed" "*"
+    "@types/ckeditor__ckeditor5-paragraph" "*"
+    "@types/ckeditor__ckeditor5-paste-from-office" "*"
+    "@types/ckeditor__ckeditor5-table" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+
+"@types/ckeditor__ckeditor5-ckfinder@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-ckfinder/download/@types/ckeditor__ckeditor5-ckfinder-29.0.3.tgz#d6b3b31e9a6d172efd429346819bad30a220ee69"
+  integrity sha1-1rOzHpptFy79QpNGgZutMKIg7mk=
+  dependencies:
+    "@types/ckeditor__ckeditor5-adapter-ckfinder" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-link" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+
+"@types/ckeditor__ckeditor5-clipboard@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-clipboard/download/@types/ckeditor__ckeditor5-clipboard-29.0.3.tgz#0c0af4052e006b746755a4fe0dc73fcd9aced7f2"
+  integrity sha1-DAr0BS4Aa3RnVaT+Dcc/zZrO1/I=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-widget" "*"
+
+"@types/ckeditor__ckeditor5-cloud-services@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-cloud-services/download/@types/ckeditor__ckeditor5-cloud-services-29.0.3.tgz#d7f1414b14f7d6b904320d5c3420296732db1e15"
+  integrity sha1-1/FBSxT31rkEMg1cNCApZzLbHhU=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-code-block@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-code-block/download/@types/ckeditor__ckeditor5-code-block-29.0.3.tgz#fa4f7044e6a8c4de125758889f4539344e4921b4"
+  integrity sha1-+k9wROaoxN4SV1iIn0U5NE5JIbQ=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-enter" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-collaboration-core@*":
+  version "27.1.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-collaboration-core/download/@types/ckeditor__ckeditor5-collaboration-core-27.1.2.tgz#d26ce86970bb5a7daef361805d83da7da743a97f"
+  integrity sha1-0mzoaXC7Wn2u82GAXYPafadDqX8=
+  dependencies:
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-core@*":
+  version "28.0.10"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-core/download/@types/ckeditor__ckeditor5-core-28.0.10.tgz#25c641501ff96e4355738abf4d26c1537f8f9e62"
+  integrity sha1-JcZBUB/5bkNVc4q/TSbBU3+PnmI=
+  dependencies:
+    "@types/ckeditor__ckeditor5-alignment" "*"
+    "@types/ckeditor__ckeditor5-autosave" "*"
+    "@types/ckeditor__ckeditor5-ckfinder" "*"
+    "@types/ckeditor__ckeditor5-cloud-services" "*"
+    "@types/ckeditor__ckeditor5-code-block" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-export-pdf" "*"
+    "@types/ckeditor__ckeditor5-export-word" "*"
+    "@types/ckeditor__ckeditor5-font" "*"
+    "@types/ckeditor__ckeditor5-heading" "*"
+    "@types/ckeditor__ckeditor5-highlight" "*"
+    "@types/ckeditor__ckeditor5-image" "*"
+    "@types/ckeditor__ckeditor5-indent" "*"
+    "@types/ckeditor__ckeditor5-language" "*"
+    "@types/ckeditor__ckeditor5-link" "*"
+    "@types/ckeditor__ckeditor5-media-embed" "*"
+    "@types/ckeditor__ckeditor5-mention" "*"
+    "@types/ckeditor__ckeditor5-pagination" "*"
+    "@types/ckeditor__ckeditor5-real-time-collaboration" "*"
+    "@types/ckeditor__ckeditor5-restricted-editing" "*"
+    "@types/ckeditor__ckeditor5-table" "*"
+    "@types/ckeditor__ckeditor5-track-changes" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-upload" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+    "@types/ckeditor__ckeditor5-word-count" "*"
+
+"@types/ckeditor__ckeditor5-easy-image@*":
+  version "29.0.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-easy-image/download/@types/ckeditor__ckeditor5-easy-image-29.0.2.tgz#12c7aecfbf3c41451fd6d0237c72b46b54463cb5"
+  integrity sha1-Eseuz788QUUf1tAjfHK0a1RGPLU=
+  dependencies:
+    "@types/ckeditor__ckeditor5-cloud-services" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-image" "*"
+    "@types/ckeditor__ckeditor5-upload" "*"
+
+"@types/ckeditor__ckeditor5-editor-classic@*":
+  version "27.1.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-editor-classic/download/@types/ckeditor__ckeditor5-editor-classic-27.1.2.tgz#aee8ff64ac9b5747c5e8ea6ff1ba1757b9fc08fb"
+  integrity sha1-ruj/ZKybV0fF6Opv8boXV7n8CPs=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-engine@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-engine/download/@types/ckeditor__ckeditor5-engine-31.0.0.tgz#6f2fee334fb14282ab061b42444f8232465e5c06"
+  integrity sha512-1KcdGRoN6PamI2V246PAr+yn4zdFpUcFdyUD7XtUBcgJ0lftr3bqfn42Z7QELez86jew1HPnHN+6OgRsh9EWSQ==
+  dependencies:
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-enter@*":
+  version "27.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-enter/download/@types/ckeditor__ckeditor5-enter-27.0.3.tgz#8155018e1a40c7f2423b9e025f60b4aa7f42b401"
+  integrity sha1-gVUBjhpAx/JCO54CX2C0qn9CtAE=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+
+"@types/ckeditor__ckeditor5-essentials@*":
+  version "28.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-essentials/download/@types/ckeditor__ckeditor5-essentials-28.0.3.tgz#b82e927a2e6b581b79596bd0f15f0d4357cbe5e9"
+  integrity sha1-uC6Sei5rWBt5WWvQ8V8NQ1fL5ek=
+  dependencies:
+    "@types/ckeditor__ckeditor5-clipboard" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-enter" "*"
+    "@types/ckeditor__ckeditor5-select-all" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-undo" "*"
+
+"@types/ckeditor__ckeditor5-export-pdf@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-export-pdf/download/@types/ckeditor__ckeditor5-export-pdf-31.0.0.tgz#c0d5bf866d23ae160c48e8e08ab804c277686007"
+  integrity sha1-wNW/hm0jrhYMSOjgirgEwndoYAc=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-export-word@*":
+  version "27.0.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-export-word/download/@types/ckeditor__ckeditor5-export-word-27.0.4.tgz#300f35178cb873dc40eaacd21035afe437b0f70c"
+  integrity sha1-MA81F4y4c9xA6qzSEDWv5Dew9ww=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-font@*":
+  version "28.0.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-font/download/@types/ckeditor__ckeditor5-font-28.0.4.tgz#f14b4c234f43f51c7be39cdfac9b1f54722321f6"
+  integrity sha1-8UtMI09D9Rx745zfrJsfVHIjIfY=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-heading@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-heading/download/@types/ckeditor__ckeditor5-heading-29.0.3.tgz#2c95796e0e6c338e68b2aadd947616548adf5472"
+  integrity sha1-LJV5bg5sM45osqrdlHYWVIrfVHI=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-paragraph" "*"
+
+"@types/ckeditor__ckeditor5-highlight@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-highlight/download/@types/ckeditor__ckeditor5-highlight-29.0.3.tgz#f028cbde1f27125627f37d2a91e2eb1e1b763ee8"
+  integrity sha1-8CjL3h8nElYn830qkeLrHht2Pug=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-image@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-image/download/@types/ckeditor__ckeditor5-image-31.0.0.tgz#4447c9c6d6e2438cdcc2a9900cdae3f0b13750d5"
+  integrity sha512-g7ozk2uhYxR6iRM7vhO+HxZhiNiirW3f2jPNoj0RdAga00eF2xoxhCcDcpCKZs1GA00RA0bTIffDN6FHVx+UaA==
+  dependencies:
+    "@types/ckeditor__ckeditor5-clipboard" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-image" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-undo" "*"
+    "@types/ckeditor__ckeditor5-upload" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+    "@types/ckeditor__ckeditor5-widget" "*"
+
+"@types/ckeditor__ckeditor5-indent@*":
+  version "29.0.3"
+  resolved "https://registry.nlark.com/@types/ckeditor__ckeditor5-indent/download/@types/ckeditor__ckeditor5-indent-29.0.3.tgz#0d99fbe9e1381251ccfe941b31216134061609df"
+  integrity sha1-DZn76eE4ElHM/pQbMSFhNAYWCd8=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-language@*":
+  version "27.1.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-language/download/@types/ckeditor__ckeditor5-language-27.1.4.tgz#a31cc73ef498fa00e37c434da971066cc7ae7b41"
+  integrity sha1-oxzHPvSY+gDjfENNqXEGbMeue0E=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-link@*":
+  version "29.0.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-link/download/@types/ckeditor__ckeditor5-link-29.0.4.tgz#56698febc97c9b61cb8f3b2f001e1476d0bb92fd"
+  integrity sha1-VmmP68l8m2HLjzsvAB4UdtC7kv0=
+  dependencies:
+    "@types/ckeditor__ckeditor5-clipboard" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-image" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-list@*":
+  version "29.0.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-list/download/@types/ckeditor__ckeditor5-list-29.0.2.tgz#7371d49f56742c26ad8ba7838f2e5b9d59226067"
+  integrity sha1-c3HUn1Z0LCati6eDjy5bnVkiYGc=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-enter" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-media-embed@*":
+  version "29.0.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-media-embed/download/@types/ckeditor__ckeditor5-media-embed-29.0.2.tgz#1a4d96dde6141a04b10b515e4c864cd215a3669d"
+  integrity sha1-Gk2W3eYUGgSxC1FeTIZM0hWjZp0=
+  dependencies:
+    "@types/ckeditor__ckeditor5-clipboard" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-undo" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+    "@types/ckeditor__ckeditor5-widget" "*"
+
+"@types/ckeditor__ckeditor5-mention@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-mention/download/@types/ckeditor__ckeditor5-mention-31.0.0.tgz#163b305f25b4db6e9c3d76c0749dad62ef4ee258"
+  integrity sha512-V2Xq+OrpegeKK6lWaJkpKLZNgW/nLZPhRl6p1rirKsEyVpxxjFO3qSZr3Byb7lxeRkyVLgR23hVgcvt8vfb5AQ==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-pagination@*":
+  version "27.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-pagination/download/@types/ckeditor__ckeditor5-pagination-27.0.3.tgz#6ef4eef74d9bb67f517a127fccaf0dab35d7afca"
+  integrity sha1-bvTu902btn9RehJ/zK8NqzXXr8o=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-paragraph@*":
+  version "27.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-paragraph/download/@types/ckeditor__ckeditor5-paragraph-27.0.3.tgz#39a304293b7cc963b86245518a981c9b70668e35"
+  integrity sha1-OaMEKTt8yWO4YkVRipgcm3BmjjU=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-paste-from-office@*":
+  version "29.0.1"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-paste-from-office/download/@types/ckeditor__ckeditor5-paste-from-office-29.0.1.tgz#2544d6f6d8b240885a2c5abb47adcda6fa8f123f"
+  integrity sha1-JUTW9tiyQIhaLFq7R63NpvqPEj8=
+  dependencies:
+    "@types/ckeditor__ckeditor5-clipboard" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+
+"@types/ckeditor__ckeditor5-real-time-collaboration@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-real-time-collaboration/download/@types/ckeditor__ckeditor5-real-time-collaboration-31.0.0.tgz#e6ccb144dee11fb91cf3524dd6c310408a9507c7"
+  integrity sha1-5syxRN7hH7kc81JN1sMQQIqVB8c=
+  dependencies:
+    "@types/ckeditor__ckeditor5-collaboration-core" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-restricted-editing@*":
+  version "28.0.4"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-restricted-editing/download/@types/ckeditor__ckeditor5-restricted-editing-28.0.4.tgz#efb6c4ca673f805bd3b582a8a350b0272cfc4ad0"
+  integrity sha1-77bEymc/gFvTtYKoo1CwJyz8StA=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-select-all@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-select-all/download/@types/ckeditor__ckeditor5-select-all-31.0.0.tgz#3a0659402f633ea883e42ecca7c014184c853833"
+  integrity sha512-Sgp9N7HHdRcE+9UZlamI3f3ZUCt1fbAYyBv3OhmS9RO9Ev/vejGcSCh3tEddzLfqBcU9HNnl39SQK0zCjeKLEA==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+
+"@types/ckeditor__ckeditor5-table@*":
+  version "31.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-table/download/@types/ckeditor__ckeditor5-table-31.0.0.tgz#156d93d764043a37c129f01996efb0b783c9cd04"
+  integrity sha512-zX+Ti37CuKDbYkEXdIQvXQnpAXVdvnZsyrx93L+WSDG79/ttsjOrf0GnxBjZCqVYWsOg4YLADN3U3ppyDb1sjA==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+    "@types/ckeditor__ckeditor5-widget" "*"
+
+"@types/ckeditor__ckeditor5-track-changes@*":
+  version "27.0.6"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-track-changes/download/@types/ckeditor__ckeditor5-track-changes-27.0.6.tgz#a24a37271b1e6b019ea841e48cab605bdb560478"
+  integrity sha1-oko3JxseawGeqEHkjKtgW9tWBHg=
+  dependencies:
+    "@types/ckeditor__ckeditor5-collaboration-core" "*"
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-typing@*":
+  version "30.0.0"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-typing/download/@types/ckeditor__ckeditor5-typing-30.0.0.tgz#2a7cd5fc2955f3b20fa28e6b5fa5ba4ed623b3d7"
+  integrity sha512-De/998tSdDrBua6g3mODJnJz8znPBsVdKeq6JAx71kx2Cdo9NQGAOsuf7aiZScF7e0QGYTNqdea1TEbkBQ7qrg==
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-ui@*":
+  version "29.0.5"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-ui/download/@types/ckeditor__ckeditor5-ui-29.0.5.tgz#ee2979622b4cf54279bf163706a4f33ab8c0f14b"
+  integrity sha1-7il5YitM9UJ5vxY3BqTzOrjA8Us=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-undo@*":
+  version "27.0.3"
+  resolved "https://registry.nlark.com/@types/ckeditor__ckeditor5-undo/download/@types/ckeditor__ckeditor5-undo-27.0.3.tgz#62ae80964188a9050be269b72fc3d64a5b09d146"
+  integrity sha1-Yq6AlkGIqQUL4mm3L8PWSlsJ0UY=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+
+"@types/ckeditor__ckeditor5-upload@*":
+  version "27.0.6"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-upload/download/@types/ckeditor__ckeditor5-upload-27.0.6.tgz#47dab20e6e2779cec4ce382d06d7ace7799e86e7"
+  integrity sha1-R9qyDm4nec7EzjgtBtes53mehuc=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-utils@*":
+  version "28.0.9"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-utils/download/@types/ckeditor__ckeditor5-utils-28.0.9.tgz#e71b56c5b6f6d49e16d79b33cea8f03a534d2ade"
+  integrity sha1-5xtWxbb21J4W15szzqjwOlNNKt4=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+
+"@types/ckeditor__ckeditor5-widget@*":
+  version "29.0.3"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-widget/download/@types/ckeditor__ckeditor5-widget-29.0.3.tgz#b895d25479ac3abff28222e241dc77bc8919e653"
+  integrity sha1-uJXSVHmsOr/ygiLiQdx3vIkZ5lM=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+    "@types/ckeditor__ckeditor5-enter" "*"
+    "@types/ckeditor__ckeditor5-typing" "*"
+    "@types/ckeditor__ckeditor5-ui" "*"
+    "@types/ckeditor__ckeditor5-utils" "*"
+
+"@types/ckeditor__ckeditor5-word-count@*":
+  version "29.0.2"
+  resolved "https://registry.npmmirror.com/@types/ckeditor__ckeditor5-word-count/download/@types/ckeditor__ckeditor5-word-count-29.0.2.tgz#b20bd0d841769f2338b885b9ac5518894e3571b5"
+  integrity sha1-sgvQ2EF2nyM4uIW5rFUYiU41cbU=
+  dependencies:
+    "@types/ckeditor__ckeditor5-core" "*"
+    "@types/ckeditor__ckeditor5-engine" "*"
+
 "@types/connect-history-api-fallback@^1.3.5":
   version "1.3.5"
   resolved "https://registry.npmmirror.com/@types/connect-history-api-fallback/download/@types/connect-history-api-fallback-1.3.5.tgz?cache=0&sync_timestamp=1637265708376&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fconnect-history-api-fallback%2Fdownload%2F%40types%2Fconnect-history-api-fallback-1.3.5.tgz#d1f7a8a09d0ed5a57aee5ae9c18ab9b803205dae"
@@ -1780,6 +2236,13 @@
   version "6.9.7"
   resolved "https://registry.npmmirror.com/@types/qs/download/@types/qs-6.9.7.tgz?cache=0&sync_timestamp=1637268454704&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fqs%2Fdownload%2F%40types%2Fqs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha1-Y7t9Bn2xB8weRXwwO8JdUR/r9ss=
+
+"@types/quill@1.3.10":
+  version "1.3.10"
+  resolved "https://registry.npmmirror.com/@types/quill/download/@types/quill-1.3.10.tgz#dc1f7b6587f7ee94bdf5291bc92289f6f0497613"
+  integrity sha1-3B97ZYf37pS99SkbySKJ9vBJdhM=
+  dependencies:
+    parchment "^1.1.2"
 
 "@types/range-parser@*":
   version "1.2.4"
@@ -2830,6 +3293,11 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
+clone@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.nlark.com/clone/download/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmmirror.com/co/download/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -3061,6 +3529,14 @@ cosmiconfig@^7.0.0, cosmiconfig@^7.0.1:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+create-react-class@^15.6.0:
+  version "15.7.0"
+  resolved "https://registry.nlark.com/create-react-class/download/create-react-class-15.7.0.tgz#7499d7ca2e69bb51d13faf59bd04f0c65a1d6c1e"
+  integrity sha1-dJnXyi5pu1HRP69ZvQTwxlodbB4=
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -4012,6 +4488,11 @@ etag@~1.8.1:
   resolved "https://registry.nlark.com/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+eventemitter3@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmmirror.com/eventemitter3/download/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
+  integrity sha512-jLN68Dx5kyFHaePoXWPsCGW5qdyZQtLYHkxkg02/Mz6g0kYpDx4FyP6XfArhQdlOC4b8Mv+EMxPo/8La7Tzghg==
+
 eventemitter3@^4.0.0:
   version "4.0.7"
   resolved "https://registry.npmmirror.com/eventemitter3/download/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
@@ -4088,10 +4569,20 @@ express@^4.17.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
+extend@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.nlark.com/extend/download/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
+  integrity sha1-+LETa0Bx+9jrFAr/hYsQGewpFfo=
+
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.nlark.com/fast-deep-equal/download/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=
+
+fast-diff@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.nlark.com/fast-diff/download/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
+  integrity sha1-S2LEK44D3j+EhGC2OQeZIGldAVQ=
 
 fast-glob@^3.2.7, fast-glob@^3.2.9:
   version "3.2.11"
@@ -5756,12 +6247,12 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.npmmirror.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz?cache=0&sync_timestamp=1627566748051&other_urls=https%3A%2F%2Fregistry.nlark.com%2Floose-envify%2Fdownload%2Floose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -6277,6 +6768,11 @@ param-case@^3.0.4:
   dependencies:
     dot-case "^3.0.4"
     tslib "^2.0.3"
+
+parchment@^1.1.2, parchment@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.npmmirror.com/parchment/download/parchment-1.1.4.tgz#aeded7ab938fe921d4c34bc339ce1168bc2ffde5"
+  integrity sha512-J5FBQt/pM2inLzg4hEWmzQx/8h8D0CiDxaG3vyp9rKrQRSDgBlhjdP5jQGgosEajXPSQouXGHOmVdgo7QmJuOg==
 
 parent-module@^1.0.0:
   version "1.0.1"
@@ -6968,7 +7464,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.npmmirror.com/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7019,6 +7515,27 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmmirror.com/quick-lru/download/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha1-NmST5rPkKjpoheLpnRj4D7eoyTI=
+
+quill-delta@^3.6.2:
+  version "3.6.3"
+  resolved "https://registry.nlark.com/quill-delta/download/quill-delta-3.6.3.tgz#b19fd2b89412301c60e1ff213d8d860eac0f1032"
+  integrity sha1-sZ/SuJQSMBxg4f8hPY2GDqwPEDI=
+  dependencies:
+    deep-equal "^1.0.1"
+    extend "^3.0.2"
+    fast-diff "1.1.2"
+
+quill@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.npmmirror.com/quill/download/quill-1.3.7.tgz#da5b2f3a2c470e932340cdbf3668c9f21f9286e8"
+  integrity sha512-hG/DVzh/TiknWtE6QmWAF/pxoZKYxfe3J/d/+ShUWkDvvkZQVTPeVmUJVu1uE6DDooC4fWTiCLh84ul89oNz5g==
+  dependencies:
+    clone "^2.1.1"
+    deep-equal "^1.0.1"
+    eventemitter3 "^2.0.3"
+    extend "^3.0.2"
+    parchment "^1.1.4"
+    quill-delta "^3.6.2"
 
 raf@^3.4.1:
   version "3.4.1"
@@ -7098,6 +7615,11 @@ react-dev-utils@^12.0.0:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
+react-dom-factories@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/react-dom-factories/download/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
+  integrity sha1-63cFxNs2+1AbOqOP91lhaqD/luA=
+
 react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.npmmirror.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
@@ -7133,6 +7655,18 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
+
+react-quill@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.nlark.com/react-quill/download/react-quill-1.3.5.tgz#8c4ad759da03365b17c79c6c52afa9772259844e"
+  integrity sha1-jErXWdoDNlsXx5xsUq+pdyJZhE4=
+  dependencies:
+    "@types/quill" "1.3.10"
+    create-react-class "^15.6.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+    quill "^1.3.7"
+    react-dom-factories "^1.0.0"
 
 react-refresh@^0.11.0:
   version "0.11.0"
