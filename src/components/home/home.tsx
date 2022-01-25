@@ -15,6 +15,9 @@ import {
   Avatar,
   Space,
   Tag,
+  Affix,
+  BackTop,
+  Trigger,
 } from '@arco-design/web-react'
 import {
   IconGithub,
@@ -22,6 +25,9 @@ import {
   IconThumbUp,
   IconCheckCircleFill,
   IconMessage,
+  IconClose,
+  IconBug,
+  IconBulb,
 } from '@arco-design/web-react/icon'
 const jsFiles = (require as any).context(
   '../../assets/theme/imgs',
@@ -48,8 +54,17 @@ const jsImgs = jsFiles.keys().map((path: any) => {
   return jsFiles(path)?.default || jsFiles(path)
 })
 
-export interface HomeProps extends BaseProps {}
-export default class Home extends PureComponent<HomeProps> {
+export interface HomeProps extends BaseProps { }
+export default class Home extends PureComponent<HomeProps, { menuVisible: boolean }> {
+
+  state = { menuVisible: false }
+
+  onVisibleChange = (v: boolean) => {
+    this.setState({
+      menuVisible: v
+    })
+  }
+
   renderLogo = () => {
     return (
       <div
@@ -86,31 +101,96 @@ export default class Home extends PureComponent<HomeProps> {
       { id: '2', name: '最新评论' },
       { id: '3', name: '最新点赞' },
     ]
+    const data1 = [
+      { id: '1', name: '最新分享' },
+      { id: '2', name: '近日想法' },
+      { id: '3', name: '总结和计划' },
+    ]
     return (
-      <div className={`${preCls}-silder-block`}>
-        <Card
-          title="站内数据"
-          extra={<Link>更多</Link>}
-          style={{ width: '100%' }}
+      <>
+        <div className={`${preCls}-silder-block ${preCls}-silder-webinfo`}>
+          <Card
+            title="站内数据"
+            extra={<Link>更多</Link>}
+            style={{ width: '100%' }}
+          >
+            <Tabs style={{ maxWidth: 350, margin: -15 }}>
+              {data.map((v, i) => {
+                return (
+                  <TabPane destroyOnHide key={v?.id} title={`${v?.name}`}>
+                    <div style={{ margin: '0px 16px 16px 16px' }}>
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                    </div>
+                  </TabPane>
+                )
+              })}
+            </Tabs>
+          </Card>
+        </div>
+        <div className={`${preCls}-silder-block ${preCls}-silder-myinfo`}>
+          <Card
+            title="我的动态"
+            extra={<Link>更多</Link>}
+            style={{ width: '100%' }}
+          >
+            <Tabs style={{ maxWidth: 350, margin: -15 }}>
+              {data1.map((v, i) => {
+                return (
+                  <TabPane destroyOnHide key={v?.id} title={`${v?.name}`}>
+                    <div style={{ margin: '0px 16px 16px 16px' }}>
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                    </div>
+                  </TabPane>
+                )
+              })}
+            </Tabs>
+          </Card>
+        </div>
+      </>
+    )
+  }
+
+  renderFooterMenu = () => {
+    const { menuVisible } = this.state;
+    const { preCls } = this.props;
+    const menu = () => (
+      <div>
+        <Menu
+          style={{ marginBottom: -4 }}
+          mode='popButton'
+          tooltipProps={{ position: 'left' }}
+          hasCollapseButton
         >
-          <Tabs style={{ maxWidth: 350, margin: -15 }}>
-            {data.map((v, i) => {
-              return (
-                <TabPane destroyOnHide key={v?.id} title={`${v?.name}`}>
-                  <div style={{ margin: '0px 16px 16px 16px' }}>
-                    {`Content ${i}`}
-                    <br />
-                    {`Content ${i}`}
-                    <br />
-                    {`Content ${i}`}
-                  </div>
-                </TabPane>
-              )
-            })}
-          </Tabs>
-        </Card>
+          <MenuItem key='1'>
+            <IconBug />
+            Bugs
+          </MenuItem>
+          <MenuItem key='2'>
+            <IconBulb />
+            Ideas
+          </MenuItem>
+        </Menu>
       </div>
     )
+    return <div className={`${preCls}-footer-menu`}>
+      <Trigger
+        onVisibleChange={this.onVisibleChange}
+        popup={menu}
+        trigger={['click', 'hover']}
+        clickToClose
+        position='top'
+      >
+        <div className={`${preCls}-footer-menu-icon-wrap`}>{menuVisible ? <IconClose /> : <IconMessage />}</div>
+      </Trigger>
+    </div>
   }
 
   customRenderList = (item: any, index: number): React.ReactNode => {
@@ -167,34 +247,36 @@ export default class Home extends PureComponent<HomeProps> {
     return (
       <div className={`${preCls}`}>
         <Layout>
-          <Header className={`${preCls}-header`}>
-            <Menu mode="horizontal" defaultSelectedKeys={['1']}>
-              <MenuItem
-                key="0"
-                style={{ padding: 0, marginRight: 38 }}
-                disabled
-              >
-                {this.renderLogo()}
-              </MenuItem>
-              <MenuItem key="1">首页</MenuItem>
-              <MenuItem key="2">技术博客</MenuItem>
-              <MenuItem key="3">个人成长</MenuItem>
-              <MenuItem key="4">站内资源</MenuItem>
-              <MenuItem key="5">在线工具</MenuItem>
-              <MenuItem className={`${preCls}-menu-item-non`} key="5" disabled>
-                {this.renderHeaderSearch()}
-              </MenuItem>
-              <MenuItem
-                className={`${preCls}-menu-item-non ${preCls}-item-extra`}
-                key="6"
-                disabled
-              >
-                {this.renderHeaderExtra()}
-              </MenuItem>
-            </Menu>
-          </Header>
+          <Affix target={() => window}>
+            <Header className={`${preCls}-header`}>
+              <Menu mode="horizontal" defaultSelectedKeys={['1']}>
+                <MenuItem
+                  key="0"
+                  style={{ padding: 0, marginRight: 38 }}
+                  disabled
+                >
+                  {this.renderLogo()}
+                </MenuItem>
+                <MenuItem key="1">首页</MenuItem>
+                <MenuItem key="2">技术博客</MenuItem>
+                <MenuItem key="3">个人成长</MenuItem>
+                <MenuItem key="4">站内资源</MenuItem>
+                <MenuItem key="5">在线工具</MenuItem>
+                <MenuItem className={`${preCls}-menu-item-non`} key="5" disabled>
+                  {this.renderHeaderSearch()}
+                </MenuItem>
+                <MenuItem
+                  className={`${preCls}-menu-item-non ${preCls}-item-extra`}
+                  key="6"
+                  disabled
+                >
+                  {this.renderHeaderExtra()}
+                </MenuItem>
+              </Menu>
+            </Header>
+          </Affix>
           <Layout className={`${preCls}-container`}>
-            <Row>
+            <Row className={`${preCls}-container-row`}>
               <Col span={15}>
                 <Tabs
                   className={`${preCls}-container-tabs`}
@@ -220,13 +302,22 @@ export default class Home extends PureComponent<HomeProps> {
                 </Tabs>
               </Col>
               <Col offset={1} span={6}>
-                <Sider className={`${preCls}-silder`}>
-                  {this.renderSilder()}
-                </Sider>
+                <Affix offsetTop={83} target={() => window}>
+                  <Sider className={`${preCls}-silder`}>
+                    {this.renderSilder()}
+                  </Sider>
+                </Affix>
               </Col>
             </Row>
           </Layout>
-          {/* <Footer className={`${preCls}-footer`}>Footer</Footer> */}
+          <Footer className={`${preCls}-footer`}>
+            <BackTop
+              visibleHeight={30}
+              style={{ position: 'fixed', bottom: '80px' }}
+              target={() => window}
+            />
+            {this.renderFooterMenu()}
+          </Footer>
         </Layout>
       </div>
     )
