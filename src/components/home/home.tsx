@@ -54,14 +54,16 @@ const jsImgs = jsFiles.keys().map((path: any) => {
   return jsFiles(path)?.default || jsFiles(path)
 })
 
-export interface HomeProps extends BaseProps { }
-export default class Home extends PureComponent<HomeProps, { menuVisible: boolean }> {
-
+export interface HomeProps extends BaseProps {}
+export default class Home extends PureComponent<
+  HomeProps,
+  { menuVisible: boolean }
+> {
   state = { menuVisible: false }
 
   onVisibleChange = (v: boolean) => {
     this.setState({
-      menuVisible: v
+      menuVisible: v,
     })
   }
 
@@ -87,9 +89,14 @@ export default class Home extends PureComponent<HomeProps, { menuVisible: boolea
     return (
       <div className={`${preCls}-header-extra`}>
         <IconGithub fontSize={35} className={`${preCls}-icon-github`} />
-        <Button type="primary" long>
-          登录
-        </Button>
+        <Space size="small">
+          <Button type="primary" long>
+            创作中心
+          </Button>
+          <Button type="primary" long>
+            登录
+          </Button>
+        </Space>
       </div>
     )
   }
@@ -159,38 +166,42 @@ export default class Home extends PureComponent<HomeProps, { menuVisible: boolea
   }
 
   renderFooterMenu = () => {
-    const { menuVisible } = this.state;
-    const { preCls } = this.props;
+    const { menuVisible } = this.state
+    const { preCls } = this.props
     const menu = () => (
       <div>
         <Menu
           style={{ marginBottom: -4 }}
-          mode='popButton'
+          mode="popButton"
           tooltipProps={{ position: 'left' }}
           hasCollapseButton
         >
-          <MenuItem key='1'>
+          <MenuItem key="1">
             <IconBug />
             Bugs
           </MenuItem>
-          <MenuItem key='2'>
+          <MenuItem key="2">
             <IconBulb />
             Ideas
           </MenuItem>
         </Menu>
       </div>
     )
-    return <div className={`${preCls}-footer-menu`}>
-      <Trigger
-        onVisibleChange={this.onVisibleChange}
-        popup={menu}
-        trigger={['click', 'hover']}
-        clickToClose
-        position='top'
-      >
-        <div className={`${preCls}-footer-menu-icon-wrap`}>{menuVisible ? <IconClose /> : <IconMessage />}</div>
-      </Trigger>
-    </div>
+    return (
+      <div className={`${preCls}-footer-menu`}>
+        <Trigger
+          onVisibleChange={this.onVisibleChange}
+          popup={menu}
+          trigger={['click', 'hover']}
+          clickToClose
+          position="top"
+        >
+          <div className={`${preCls}-footer-menu-icon-wrap`}>
+            {menuVisible ? <IconClose /> : <IconMessage />}
+          </div>
+        </Trigger>
+      </div>
+    )
   }
 
   customRenderList = (item: any, index: number): React.ReactNode => {
@@ -199,7 +210,7 @@ export default class Home extends PureComponent<HomeProps, { menuVisible: boolea
     return (
       <div className={`${preCls}-list-item`}>
         <div className={`${preCls}-list-item-left`}>
-          <h3>
+          <h3 className={`${preCls}-list-item-title`}>
             我是文章的标题
             <span className={`${preCls}-tags`}>
               <Space size="small">
@@ -208,6 +219,10 @@ export default class Home extends PureComponent<HomeProps, { menuVisible: boolea
               </Space>
             </span>
           </h3>
+          <p className={`${preCls}-list-item-desc`}>
+            滑坡谬误（Slippery
+            slope）是一种非形式谬误，使用连串的因果推论，却夸大了每个环节的因果强度，而得到不合理的结论。有些说法将连续体谬误也归为滑坡谬误，但近来已较少这样使用。图为滑坡谬误原理运用示例。
+          </p>
           <p>
             <span>
               <Avatar size={30} />
@@ -262,7 +277,11 @@ export default class Home extends PureComponent<HomeProps, { menuVisible: boolea
                 <MenuItem key="3">个人成长</MenuItem>
                 <MenuItem key="4">站内资源</MenuItem>
                 <MenuItem key="5">在线工具</MenuItem>
-                <MenuItem className={`${preCls}-menu-item-non`} key="5" disabled>
+                <MenuItem
+                  className={`${preCls}-menu-item-non`}
+                  key="5"
+                  disabled
+                >
                   {this.renderHeaderSearch()}
                 </MenuItem>
                 <MenuItem
