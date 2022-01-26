@@ -2,7 +2,7 @@
 @import './prefix.less';
 @import '../components/login/style/index.less';
 @import '../components/home/style/index.less';
-@import '../components/creation/richtext/style/index.less';
+@import '../components/creation/quill/style/index.less';
 @import '@arco-design/web-react/dist/css/arco.css';
 
 html,
@@ -19,10 +19,11 @@ body {
 //通用的样式
 
 //link
-.@{link}{
+.@{link} {
   color: #0056b3;
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     text-decoration: underline;
   }
 }

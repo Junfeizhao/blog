@@ -5,9 +5,9 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { Input } from '@arco-design/web-react'
 
-export interface RichTextProps extends BaseProps {}
+export interface QuillProps extends BaseProps { }
 
-export default class RichText extends PureComponent<RichTextProps> {
+export default class Quill extends PureComponent<QuillProps> {
   render() {
     const { preCls } = this.props
     return (
