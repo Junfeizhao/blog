@@ -1,3 +1,85 @@
 .@{quillPreCls} {
-  color: red;
+  height: 100%;
+
+  &-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    &-title {
+      height: 60px;
+      border-left: none;
+      border-right: none;
+      background: none !important;
+      font-size: 24px;
+
+      &:focus {
+        border-color: rgb(242, 243, 245);
+      }
+    }
+
+    &-extra {
+      width: 500px;
+
+      .@{quillPreCls}-header-word-count {
+        color: var(--regular-fc);
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 90 * var(--hd));
+
+    &-row,
+    &-col {
+      width: 100%;
+      height: 100%;
+    }
+
+    .@{quillPreCls}-quill {
+      height: calc(100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .@{quillPreCls}-quill-write {
+      background: rgb(248, 249, 250);
+    }
+
+    .@{quillPreCls}-quill-read {
+      width: 100%;
+    }
+
+    .@{quillPreCls}-quill-read-head {
+      width: 100%;
+      height: 24px;
+      padding: 8px 0;
+      border-top: 1px solid rgb(204, 204, 204);
+      background: rgb(248, 249, 250);
+    }
+
+    .@{quillPreCls}-quill-read-con {
+      flex: 1;
+      border: 1px solid rgb(204, 204, 204);
+      border-right: 0;
+    }
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: var(--font-size-12);
+    color: var(--main-fc);
+    line-height: 25px;
+  }
+
+  .ql-container,
+  .ql-snow {
+    border-right: 0 !important;
+    border-left: 0 !important;
+  }
 }

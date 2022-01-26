@@ -9,7 +9,7 @@ export type loadComponentType<T> = {
   loader:loaderType<T>
 }
 
-const noop = ()=>null;
+const noop = ()=> null;
 
 //原生封装
 // function loadComponent<T>(load:loadType<T>):ComponentType<T>{
