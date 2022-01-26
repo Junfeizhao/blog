@@ -92,8 +92,9 @@ export default class QuillComponent extends PureComponent<QuillProps, { quillVal
               <div className={`${preCls}-quill ${preCls}-quill-read`}>
                 <div className={`${preCls}-quill-read-head`}>
                 </div>
-                <div className={`${preCls}-quill-read-con ql-editor`} dangerouslySetInnerHTML={{ __html: quillValue }}>
-
+                <div className={`${preCls}-quill-read-con-wrap ql-snow`}>
+                  <div className={`${preCls}-quill-read-con ql-editor`} dangerouslySetInnerHTML={{ __html: quillValue }}>
+                  </div>
                 </div>
               </div>
             </Col>
