@@ -1,25 +1,21 @@
 import * as React from 'react'
-import { Component, PureComponent } from 'react'
+import { PureComponent } from 'react'
 import { BaseProps } from '../../../types/index'
 import ReactQuill, { Quill } from 'react-quill'
 import { Input, Button, Space, Grid, Modal, Form, Select, Radio, Upload } from '@arco-design/web-react'
-import {
-  IconPlus,
-  IconEdit
-} from '@arco-design/web-react/icon'
+import { IconPlus, IconEdit } from '@arco-design/web-react/icon'
 import { ImageDrop } from 'quill-image-drop-module'
 import imageResize from 'quill-image-resize-module'
+
 Quill.register('modules/imageDrop', ImageDrop)
 Quill.register('modules/imageResize', imageResize);
 
-export interface QuillProps extends BaseProps { }
 
 const { Row, Col } = Grid;
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
 const Option = Select.Option;
 const RadioGroup = Radio.Group;
-
 const classification = [{ text: '前端', id: 'front' }, { text: '后端', id: 'after' }];
 const labels = [{ classID: 'front', labels: [{ text: 'html', id: 'html' }, { text: 'css', id: 'css' }] }, { classID: 'after', labels: [{ text: 'java', id: 'java' }, { text: 'nodejs', id: 'nodejs' }] }]
 
@@ -49,6 +45,7 @@ const quillModules = {
   }
 }
 
+export interface QuillProps extends BaseProps { }
 interface QuillState {
   quillValue: any,
   textCount: number,
@@ -84,65 +81,61 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
     this.quillEditor = this.quillRef?.current?.getEditor() || undefined;
   }
 
-
-  quillChange = (quillValue: any, b: any) => {
-    console.log(quillValue, 'change')
+  onQuillChange = (quillValue: any, b: any) => {
     this.setState({
       quillValue
-    })
+    });
     if (this.quillEditor && this.quillEditor.getLength && this.quillEditor.getLines) {
       const textCount = this.quillEditor.getLength() - 1;
       const lineCount = this.quillEditor.getLines()?.length;
       this.setState({
         textCount,
-        lineCount
-      })
+        lineCount,
+      });
     }
   }
 
-  onTitleChange = (v: string) => {
+  onTitleChange = (titleValue: string) => {
     this.setState({
-      titleValue: v
-    })
+      titleValue
+    });
   }
-  coverChange = (cover: string) => {
+
+  onCoverChange = (cover: string) => {
     this.setState({
       cover
-    })
+    });
   }
+
   openModal = () => {
-    this.setState({ visible: true })
+    this.setState({ visible: true });
   }
 
   closeModal = () => {
-    this.setState({ visible: false })
+    this.setState({ visible: false });
   }
-  setClassification = (v: any) => {
+
+  onClassificationChange = (v: string) => {
     const newLabel = labels.find((d: any) => d.classID === v)?.labels;
     this.setState({
       label: newLabel || [],
       labelValue: newLabel?.[0]?.text || ''
-    })
+    });
   }
 
   onLabelChange = (labelValue: string) => {
     this.setState({
       labelValue
-    })
+    });
   }
 
-  fileChange = (_: any, currentFile: any) => {
-    console.log(currentFile)
+  onFileChange = (_: any, currentFile: any) => {
     this.setState({
       file: {
         ...currentFile,
         url: URL.createObjectURL(currentFile.originFile),
       }
-    })
-  }
-
-  renderDialog = () => {
-
+    });
   }
 
   renderUpload = () => {
@@ -153,10 +146,14 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
       action='/'
       fileList={file ? [file] : []}
       showUploadList={false}
-      onChange={this.fileChange}
+      onChange={this.onFileChange}
     >
       <div className={`${preCls}-form-upload`}>
-        {fileUrl ? <div className={`${preCls}-form-upload-mask-wrap`}><div className={`${preCls}-form-upload-mask`}><IconEdit className={`${preCls}-form-upload-icon ${preCls}-form-upload-icon-edit`} /> </div><img className={`${preCls}-form-upload-img`} src={fileUrl} alt='' /></div> : <div className={`${preCls}-form-upload-add`}>
+        {fileUrl ? <div className={`${preCls}-form-upload-mask-wrap`}>
+          <div className={`${preCls}-form-upload-mask`}>
+            <IconEdit className={`${preCls}-form-upload-icon ${preCls}-form-upload-icon-edit`} /> </div>
+          <img className={`${preCls}-form-upload-img`} src={fileUrl} alt='' />
+        </div> : <div className={`${preCls}-form-upload-add`}>
           <IconPlus className={`${preCls}-form-upload-icon`} />
         </div>}
       </div>
@@ -165,7 +162,7 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
 
   render() {
     const { preCls } = this.props
-    const { quillValue, lineCount, textCount, titleValue, visible, classificationValue, label, labelValue, cover } = this.state;
+    const { quillValue, lineCount, textCount, titleValue, visible, label, labelValue, cover } = this.state;
     return (
       <div className={`${preCls}`}>
         <div className={`${preCls}-header`}>
@@ -175,7 +172,7 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
         <div className={`${preCls}-content`}>
           <Row className={`${preCls}-content-row`}>
             <Col span={12} className={`${preCls}-content-col`}>
-              <ReactQuill modules={quillModules} ref={this.quillRef} onChange={this.quillChange} className={`${preCls}-quill ${preCls}-quill-write`} theme="snow" />
+              <ReactQuill modules={quillModules} ref={this.quillRef} onChange={this.onQuillChange} className={`${preCls}-quill ${preCls}-quill-write`} theme="snow" />
             </Col>
             <Col span={12} className={`${preCls}-content-col`}>
               <div className={`${preCls}-quill ${preCls}-quill-read`}>
@@ -202,7 +199,7 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
           >
             <Form className={`${preCls}-form`}>
               <FormItem label='封面' field='username'>
-                <RadioGroup defaultValue='no-img' onChange={this.coverChange}>
+                <RadioGroup defaultValue='no-img' onChange={this.onCoverChange}>
                   <Radio value='single-img'>
                     单图
                   </Radio >
@@ -214,8 +211,10 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
               </FormItem>
               <FormItem label='摘要'>
                 <TextArea
-                  placeholder='Please enter ...'
-                  style={{ minHeight: 64, width: 350 }}
+                  className={`${preCls}-form-textarea`}
+                  placeholder='摘要:选填,最多输入256个字符'
+                  maxLength={256}
+                  showWordLimit
                 />
               </FormItem>
               <FormItem label='分类标签' field='username'>
@@ -223,7 +222,7 @@ export default class QuillComponent extends PureComponent<QuillProps, QuillState
                   <Select
                     placeholder='分类'
                     style={{ width: 154 }}
-                    onChange={this.setClassification}
+                    onChange={this.onClassificationChange}
 
                   >
                     {classification.map((option, index) => (

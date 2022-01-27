@@ -9,11 +9,11 @@
     align-items: center;
 
     &-title {
-      height: 60px;
+      height: calc(60 * var(--hd));
       border-left: none;
       border-right: none;
       background: none !important;
-      font-size: 24px;
+      font-size: calc(24 * var(--hd));
 
       &:focus {
         border-color: rgb(242, 243, 245);
@@ -21,11 +21,11 @@
     }
 
     &-extra {
-      width: 500px;
+      width: calc(500 * var(--hd));
 
       .@{quillPreCls}-header-word-count {
         color: var(--regular-fc);
-        margin: 0 10px;
+        margin: 0 var(--space-10);
       }
     }
   }
@@ -57,25 +57,25 @@
 
     .@{quillPreCls}-quill-read-head {
       @media screen and (max-width: 1720px) {
-        height: 48px;
+        height: calc(48 * var(--hd));
       }
 
       @media screen and (max-width: 900px) {
-        height: 71px;
+        height: calc(71 * var(--hd));
       }
 
       @media screen and (max-width: 680px) {
-        height: 95px;
+        height: calc(95 * var(--hd));
       }
 
       @media screen and (max-width: 500px) {
-        height: 119px;
+        height: calc(119 * var(--hd));
       }
 
       width: 100%;
-      height: 24px;
-      padding: 8px 0;
-      border-top: 1px solid rgb(204, 204, 204);
+      height: calc(24 * var(--hd));
+      padding:var(--space-8) 0;
+      border-top: var(--hd) solid rgb(204, 204, 204);
       background: rgb(248, 249, 250);
     }
 
@@ -86,7 +86,7 @@
 
     .@{quillPreCls}-quill-read-con {
       height: 100%;
-      border: 1px solid rgb(204, 204, 204);
+      border: var(--hd) solid rgb(204, 204, 204);
     }
   }
 
@@ -96,17 +96,22 @@
     width: 100%;
     font-size: var(--font-size-12);
     color: var(--main-fc);
-    line-height: 25px;
+    line-height: calc(25 * var(--hd));
   }
 
   &-form {
+    &-textarea {
+      resize: none;
+      height: 90px;
+    }
+
     &-upload {
-      width: 80px;
-      height: 80px;
+      width: calc(80 * var(--hd));
+      height: calc(80 * var(--hd));
       position: relative;
-      border-radius: 3px;
+      border-radius: calc(3 * var(--hd));
       overflow: hidden;
-      padding: 2px;
+      padding: var(--space-2);
 
       &:hover .@{quillPreCls}-form-upload-mask {
         opacity: 1;
@@ -147,8 +152,8 @@
     &-upload-add {
       width: 100%;
       height: 100%;
-      border: 1px dashed rgb(229, 230, 235);
-      color: #999;
+      border: var(--hd) dashed rgb(229, 230, 235);
+      color: var(--secondary-fc);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -169,6 +174,6 @@
   .ql-container {
     flex: 1;
     overflow: hidden;
-    font-size: 14px !important;
+    font-size: var(--font-size-14) !important;
   }
 }
