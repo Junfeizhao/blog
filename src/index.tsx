@@ -7,9 +7,9 @@ import Login from './components/login/index'
 import Quill from './components/creation/quill/index'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Quill />
-  </React.StrictMode>,
+
+  <Quill />
+  ,
   document.getElementById('root')
 )
 
