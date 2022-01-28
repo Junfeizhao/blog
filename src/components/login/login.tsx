@@ -6,6 +6,7 @@ import bgUrl from '../../assets/theme/imgs/login-bg.jpg'
 import logoUrl from '../../assets/theme/imgs/logo.svg'
 import { link } from '../../style/constant'
 
+
 const { Row, Col } = Grid
 const { Item } = Form
 
@@ -68,7 +69,7 @@ export default class login extends PureComponent<loginProps> {
                 </a>
               </p>
               <p>
-                <a className={`${preCls}-tourist-into ${link}`} href="">
+                <a className={`${preCls}-tourist-into ${link}`} href="/">
                   暂不注册，以游客的方式进入
                 </a>
               </p>

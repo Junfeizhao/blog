@@ -2,14 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './style/index.less'
 import reportWebVitals from './reportWebVitals'
+import { Route, Routes } from 'react-router-dom';
+import history from './utils/history'
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
 import Home from './components/home/index'
 import Login from './components/login/index'
 import Quill from './components/creation/quill/index'
-
 ReactDOM.render(
-
-  <Quill />
-  ,
+  <HistoryRouter history={history}>
+    <Routes>
+      <Route path='/' element={<Home />}></Route>
+      <Route path='/login' element={<Login />}></Route>
+      <Route path='/creation/quill' element={<Quill />}></Route>
+    </Routes>
+  </ HistoryRouter>,
   document.getElementById('root')
 )
 

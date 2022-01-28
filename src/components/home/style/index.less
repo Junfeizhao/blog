@@ -29,10 +29,27 @@
         display: flex;
         align-items: center;
       }
+
+      .@{homePreCls}-header-btngroup {
+
+
+        .arco-icon {
+          color: var(--baseWhite);
+          margin: 0 !important;
+        }
+      }
     }
 
     .@{homePreCls}-icon-github {
       cursor: pointer;
+      margin-right: 20px;
+      font-size: 25px;
+    }
+
+    &-popover {
+      &-content-menu {
+        box-shadow: 0 0 24px rgb(81 87 103 / 16%);
+      }
     }
   }
 
@@ -70,7 +87,8 @@
         padding: 0 20px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.063);
       }
-      .@{homePreCls}-list-item-desc{
+
+      .@{homePreCls}-list-item-desc {
         color: #666;
       }
 

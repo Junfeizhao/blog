@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Component, PureComponent } from 'react'
-import { BaseProps } from '../../types/index'
-
+import history from '../../utils/history';
+import { BaseProps } from '../../types/index';
 import {
   Layout,
   Menu,
@@ -18,6 +18,7 @@ import {
   Affix,
   BackTop,
   Trigger,
+  Popover,
 } from '@arco-design/web-react'
 import {
   IconGithub,
@@ -28,6 +29,9 @@ import {
   IconClose,
   IconBug,
   IconBulb,
+  IconDown,
+  IconEdit,
+  IconCommon
 } from '@arco-design/web-react/icon'
 const jsFiles = (require as any).context(
   '../../assets/theme/imgs',
@@ -48,13 +52,15 @@ const tabs = [
 ]
 
 const MenuItem = Menu.Item
+const ButtonGroup = Button.Group;
 const SubMenu = Menu.SubMenu
 const Search = Input.Search
 const jsImgs = jsFiles.keys().map((path: any) => {
   return jsFiles(path)?.default || jsFiles(path)
 })
 
-export interface HomeProps extends BaseProps {}
+export interface HomeProps extends BaseProps { }
+
 export default class Home extends PureComponent<
   HomeProps,
   { menuVisible: boolean }
@@ -65,6 +71,10 @@ export default class Home extends PureComponent<
     this.setState({
       menuVisible: v,
     })
+  }
+  onClickMenuItem = (url: string) => {
+    console.log(url);
+    history.push(url)
   }
 
   renderLogo = () => {
@@ -85,15 +95,28 @@ export default class Home extends PureComponent<
     return <Search className={`${preCls}-header-search`} />
   }
   renderHeaderExtra = () => {
-    const { preCls } = this.props
+    const { preCls } = this.props;
+    const handleClick = () => {
+      console.log(this.props, 99)
+      history.push('/login');
+    };
+    const content = () => <div className={`${preCls}-header-popover-content`}>
+      <Menu className={`${preCls}-header-popover-content-menu`} onClickMenuItem={this.onClickMenuItem}>
+        <MenuItem key='creation/quill'><IconEdit />写文章</MenuItem>
+        <MenuItem key='0_11'><IconCommon />草稿箱</MenuItem>
+      </Menu>
+    </div>
     return (
       <div className={`${preCls}-header-extra`}>
-        <IconGithub fontSize={35} className={`${preCls}-icon-github`} />
-        <Space size="small">
-          <Button type="primary" long>
-            创作中心
-          </Button>
-          <Button type="primary" long>
+        <IconGithub className={`${preCls}-icon-github`} />
+        <Space size='medium'>
+          <ButtonGroup className={`${preCls}-header-btngroup`}>
+            <Button type='primary'>创作中心</Button>
+            <Trigger className={`${preCls}-header-popover`} trigger={'click'} popupAlign={{ bottom: 10 }} position='br' popup={content} >
+              <Button type='primary' icon={<IconDown />} />
+            </Trigger>
+          </ButtonGroup>
+          <Button type="outline" onClick={handleClick}>
             登录
           </Button>
         </Space>
@@ -208,7 +231,7 @@ export default class Home extends PureComponent<
     const { preCls } = this.props
     // const imgSrc = js
     return (
-      <div className={`${preCls}-list-item`}>
+      <div className={`${preCls}-list-item`} key={index}>
         <div className={`${preCls}-list-item-left`}>
           <h3 className={`${preCls}-list-item-title`}>
             我是文章的标题
