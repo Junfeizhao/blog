@@ -63,9 +63,9 @@ export interface HomeProps extends BaseProps { }
 
 export default class Home extends PureComponent<
   HomeProps,
-  { menuVisible: boolean }
+  { menuVisible: boolean, affix: boolean }
 > {
-  state = { menuVisible: false }
+  state = { menuVisible: false, affix: false }
 
   onVisibleChange = (v: boolean) => {
     this.setState({
@@ -75,6 +75,12 @@ export default class Home extends PureComponent<
   onClickMenuItem = (url: string) => {
     console.log(url);
     history.push(url)
+  }
+  affixChange = (affix: boolean) => {
+    console.log(affix)
+    this.setState({
+      affix
+    })
   }
 
   renderLogo = () => {
@@ -137,28 +143,17 @@ export default class Home extends PureComponent<
       { id: '3', name: '总结和计划' },
     ]
     return (
-      <>
-        <div className={`${preCls}-silder-block ${preCls}-silder-webinfo`}>
+      <div className={`${preCls}-silder-block-wrap`}>
+        <div className={`${preCls}-silder-block ${preCls}-silder-myfile`}>
           <Card
-            title="站内数据"
-            extra={<Link>更多</Link>}
+            title="我的个人信息"
+            extra={<Link>详细</Link>}
             style={{ width: '100%' }}
           >
-            <Tabs style={{ maxWidth: 350, margin: -15 }}>
-              {data.map((v, i) => {
-                return (
-                  <TabPane destroyOnHide key={v?.id} title={`${v?.name}`}>
-                    <div style={{ margin: '0px 16px 16px 16px' }}>
-                      {`Content ${i}`}
-                      <br />
-                      {`Content ${i}`}
-                      <br />
-                      {`Content ${i}`}
-                    </div>
-                  </TabPane>
-                )
-              })}
-            </Tabs>
+            <p>
+              90后的前端工程师;白羊座一枚;坐标上海,喜欢读书\羽毛球\游泳,热衷于自我成长。
+            </p>
+            <p>github：<a href='https://github.com/Junfeizhao'>https://github.com/Junfeizhao</a></p>
           </Card>
         </div>
         <div className={`${preCls}-silder-block ${preCls}-silder-myinfo`}>
@@ -184,7 +179,30 @@ export default class Home extends PureComponent<
             </Tabs>
           </Card>
         </div>
-      </>
+        <div className={`${preCls}-silder-block ${preCls}-silder-webinfo`}>
+          <Card
+            title="站内数据"
+            extra={<Link>更多</Link>}
+            style={{ width: '100%' }}
+          >
+            <Tabs style={{ maxWidth: 350, margin: -15 }}>
+              {data.map((v, i) => {
+                return (
+                  <TabPane destroyOnHide key={v?.id} title={`${v?.name}`}>
+                    <div style={{ margin: '0px 16px 16px 16px' }}>
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                      <br />
+                      {`Content ${i}`}
+                    </div>
+                  </TabPane>
+                )
+              })}
+            </Tabs>
+          </Card>
+        </div>
+      </div>
     )
   }
 
@@ -318,30 +336,36 @@ export default class Home extends PureComponent<
             </Header>
           </Affix>
           <Layout className={`${preCls}-container`}>
+            <Row>
+              <Col span={15}>
+                <Affix offsetTop={50} onChange={this.affixChange}>
+                  <Tabs
+                    className={`${preCls}-container-tabs`}
+                    defaultActiveTab="0"
+                  >
+                    {tabs.map((x, i) => (
+                      <TabPane
+                        className={`${preCls}-container-tabs-pannel`}
+                        destroyOnHide
+                        key={x.key}
+                        title={x.title}
+                      >
+                      </TabPane>
+                    ))}
+                  </Tabs>
+                </Affix>
+              </Col>
+            </Row>
             <Row className={`${preCls}-container-row`}>
               <Col span={15}>
-                <Tabs
-                  className={`${preCls}-container-tabs`}
-                  defaultActiveTab="0"
-                >
-                  {tabs.map((x, i) => (
-                    <TabPane
-                      className={`${preCls}-container-tabs-pannel`}
-                      destroyOnHide
-                      key={x.key}
-                      title={x.title}
-                    >
-                      <Content>
-                        <List
-                          bordered={false}
-                          className={`${preCls}-list`}
-                          dataSource={dataSource}
-                          render={this.customRenderList}
-                        />
-                      </Content>
-                    </TabPane>
-                  ))}
-                </Tabs>
+                <Content>
+                  <List
+                    bordered={false}
+                    className={`${preCls}-list`}
+                    dataSource={dataSource}
+                    render={this.customRenderList}
+                  />
+                </Content>
               </Col>
               <Col offset={1} span={6}>
                 <Affix offsetTop={83} target={() => window}>
