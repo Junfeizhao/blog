@@ -151,6 +151,9 @@ export default class Home extends PureComponent<
             style={{ width: '100%' }}
           >
             <p>
+              姓名:Ian
+            </p>
+            <p>
               90后的前端工程师;白羊座一枚;坐标上海,喜欢读书\羽毛球\游泳,热衷于自我成长。
             </p>
             <p>github：<a href='https://github.com/Junfeizhao'>https://github.com/Junfeizhao</a></p>
@@ -295,6 +298,7 @@ export default class Home extends PureComponent<
 
   render() {
     const { preCls } = this.props
+    const { affix } = this.state;
     const dataSource = new Array(50).fill({
       title: 'Beijing Bytedance Technology Co., Ltd.',
       description:
@@ -335,27 +339,30 @@ export default class Home extends PureComponent<
               </Menu>
             </Header>
           </Affix>
+          <Row className={`${preCls}-second-menu`} style={affix ? { width: '100%' } : { width: '80%' }}>
+            <Col span={affix ? 24 : 15}>
+              <Affix offsetTop={50} onChange={this.affixChange}>
+                <Tabs
+                  className={`${preCls}-container-tabs`}
+                  defaultActiveTab="0"
+                >
+                  {tabs.map((x, i) => (
+                    <TabPane
+                      className={`${preCls}-container-tabs-pannel`}
+                      destroyOnHide
+                      key={x.key}
+                      title={x.title}
+                    >
+                    </TabPane>
+                  ))}
+                </Tabs>
+              </Affix>
+            </Col>
+            <Col offset={1} span={6}>
+
+            </Col>
+          </Row>
           <Layout className={`${preCls}-container`}>
-            <Row>
-              <Col span={15}>
-                <Affix offsetTop={50} onChange={this.affixChange}>
-                  <Tabs
-                    className={`${preCls}-container-tabs`}
-                    defaultActiveTab="0"
-                  >
-                    {tabs.map((x, i) => (
-                      <TabPane
-                        className={`${preCls}-container-tabs-pannel`}
-                        destroyOnHide
-                        key={x.key}
-                        title={x.title}
-                      >
-                      </TabPane>
-                    ))}
-                  </Tabs>
-                </Affix>
-              </Col>
-            </Row>
             <Row className={`${preCls}-container-row`}>
               <Col span={15}>
                 <Content>
@@ -368,8 +375,8 @@ export default class Home extends PureComponent<
                 </Content>
               </Col>
               <Col offset={1} span={6}>
-                <Affix offsetTop={83} target={() => window}>
-                  <Sider className={`${preCls}-silder`}>
+                <Affix offsetTop={100} target={() => window}>
+                  <Sider style={affix ? { margin: '0' } : { marginTop: "-21px" }} className={`${preCls}-silder`}>
                     {this.renderSilder()}
                   </Sider>
                 </Affix>
