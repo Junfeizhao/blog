@@ -35,7 +35,8 @@ export default class login extends PureComponent<loginProps, { visible: boolean 
     const form = this.formRef?.current;
     if (!form) return;
     console.log(form.getFields())
-    axios.post('http://localhost:8080/regist', {
+
+    axios.post('/api/regist', {
       data: form.getFields()
     })
   }
